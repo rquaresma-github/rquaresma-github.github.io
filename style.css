@@ -1,0 +1,36 @@
+/* Layout: one readable column on linen, like the game's fabric. */
+:root {
+  --table: #d9cab0;
+  --fabric: #f3ebdc;
+  --ink: #2e2318;
+  --muted: #6e5f49;
+  --hem: #b8a586;
+  --accent: #b02a33;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --table: #0e1420; --fabric: #22324d; --ink: #eee7da; --muted: #a9b4c8; --hem: #5b7096; --accent: #ff7a83; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--table); color: var(--ink); font: 17px/1.6 var(--serif); padding-inline: 16px; padding-block: 32px 48px; }
+main { max-width: 44rem; margin: 0 auto; background: var(--fabric); border-radius: 18px; padding: 32px clamp(20px, 5vw, 48px) 40px; position: relative; box-shadow: 0 6px 24px rgb(0 0 0 / .12); }
+main::before { content: ""; position: absolute; inset: 8px; border: 1.5px dashed var(--hem); border-radius: 12px; pointer-events: none; }
+.eyebrow { font: 700 12px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+h1 { font-size: 2.3rem; line-height: 1.15; font-style: italic; margin: 0 0 6px; text-wrap: balance; }
+h2 { font-size: 1.3rem; margin: 2rem 0 .4rem; text-wrap: balance; }
+p, ul { margin: 0 0 .9rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: .35rem; }
+.updated { color: var(--muted); font-size: .95rem; margin-bottom: 1.6rem; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: .4rem 0 1rem; }
+th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--hem); }
+th { font-family: var(--sans); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.table-wrap { overflow-x: auto; }
+.contact { background: color-mix(in srgb, var(--hem) 18%, transparent); border-radius: 10px; padding: 14px 16px; }
+nav { max-width: 44rem; margin: 0 auto 16px; font: 600 14px/1 var(--sans); display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { color: var(--ink); text-decoration: none; opacity: .8; }
+nav a:hover { opacity: 1; text-decoration: underline; }
+footer { max-width: 44rem; margin: 20px auto 0; color: var(--muted); font: 13px/1.5 var(--sans); text-align: center; }
