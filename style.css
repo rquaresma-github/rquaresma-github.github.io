@@ -1,36 +1,128 @@
-/* Layout: one readable column on linen, like the game's fabric. */
+/* Maple Drift: the studio splash's night sky. A red maple-leaf ship, stars, a violet haze, coral glow.
+   Colours and type from the splash spec (Gravensmoor's design/splash/README.md). */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap");
+
 :root {
-  --table: #d9cab0;
-  --fabric: #f3ebdc;
-  --ink: #2e2318;
-  --muted: #6e5f49;
-  --hem: #b8a586;
-  --accent: #b02a33;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sky: #0b0a1a;
+  --haze: rgba(90, 50, 140, .35);
+  --panel: rgba(22, 19, 44, .78);
+  --edge: rgba(230, 225, 255, .12);
+  --ink: #ece8fb;
+  --muted: #a49fc2;
+  --red: #e8453a;
+  --coral: #ff8a7a;
+  --studios: #f07a6c;
+  --display: "Unbounded", "Avenir Next", -apple-system, system-ui, sans-serif;
   --sans: -apple-system, "Segoe UI", system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --table: #0e1420; --fabric: #22324d; --ink: #eee7da; --muted: #a9b4c8; --hem: #5b7096; --accent: #ff7a83; color-scheme: dark; }
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--table); color: var(--ink); font: 17px/1.6 var(--serif); padding-inline: 16px; padding-block: 32px 48px; }
-main { max-width: 44rem; margin: 0 auto; background: var(--fabric); border-radius: 18px; padding: 32px clamp(20px, 5vw, 48px) 40px; position: relative; box-shadow: 0 6px 24px rgb(0 0 0 / .12); }
-main::before { content: ""; position: absolute; inset: 8px; border: 1.5px dashed var(--hem); border-radius: 12px; pointer-events: none; }
-.eyebrow { font: 700 12px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
-h1 { font-size: 2.3rem; line-height: 1.15; font-style: italic; margin: 0 0 6px; text-wrap: balance; }
-h2 { font-size: 1.3rem; margin: 2rem 0 .4rem; text-wrap: balance; }
+html { background: var(--sky); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font: 17px/1.65 var(--sans);
+  padding-inline: 16px;
+  padding-block: 28px 48px;
+  background:
+    radial-gradient(60vh 60vh at 70% 25vh, var(--haze), transparent 70%),
+    url("/stars.svg") 0 0 / 390px 844px repeat,
+    var(--sky);
+  background-attachment: fixed;
+}
+
+/* Top bar: the ship and the name, then the page's links. */
+nav {
+  max-width: 44rem; margin: 0 auto 22px;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  font: 600 14px/1 var(--sans);
+}
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--ink); }
+nav a:first-child {
+  display: inline-flex; align-items: center; gap: 10px; margin-right: auto;
+  font: 700 15px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--red);
+}
+nav a:first-child::before {
+  content: ""; width: 26px; height: 25px;
+  background: url("/mark.svg") center / contain no-repeat;
+}
+
+main {
+  max-width: 44rem; margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: 18px;
+  padding: 32px clamp(20px, 5vw, 48px) 40px;
+  box-shadow: 0 20px 60px rgb(0 0 0 / .45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.eyebrow {
+  font: 500 12px/1 var(--display); letter-spacing: .3em; text-transform: uppercase;
+  color: var(--studios); margin: 0 0 12px;
+}
+h1 { font: 700 2.1rem/1.15 var(--display); margin: 0 0 8px; text-wrap: balance; }
+h2 { font: 700 1.15rem/1.3 var(--display); margin: 2.1rem 0 .5rem; text-wrap: balance; color: var(--ink); }
 p, ul { margin: 0 0 .9rem; }
 ul { padding-left: 1.2rem; }
 li { margin-bottom: .35rem; }
+li::marker { color: var(--red); }
+strong { color: #fff; }
 .updated { color: var(--muted); font-size: .95rem; margin-bottom: 1.6rem; }
-a { color: var(--accent); text-underline-offset: 2px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+a { color: var(--coral); text-underline-offset: 3px; }
+a:hover { color: #ffb0a4; }
+a:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; border-radius: 3px; }
 table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: .4rem 0 1rem; }
-th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--hem); }
-th { font-family: var(--sans); font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--edge); }
+th { font: 500 .72rem/1.3 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .table-wrap { overflow-x: auto; }
-.contact { background: color-mix(in srgb, var(--hem) 18%, transparent); border-radius: 10px; padding: 14px 16px; }
-nav { max-width: 44rem; margin: 0 auto 16px; font: 600 14px/1 var(--sans); display: flex; gap: 16px; flex-wrap: wrap; }
-nav a { color: var(--ink); text-decoration: none; opacity: .8; }
-nav a:hover { opacity: 1; text-decoration: underline; }
-footer { max-width: 44rem; margin: 20px auto 0; color: var(--muted); font: 13px/1.5 var(--sans); text-align: center; }
+.contact {
+  background: rgba(232, 69, 58, .08);
+  border: 1px solid rgba(232, 69, 58, .28);
+  border-radius: 12px; padding: 14px 16px;
+}
+footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/1.5 var(--sans); text-align: center; }
+
+/* Home page: the splash's logo, the ship at rest with its contrails running down past the name. */
+.home main { background: none; border: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; padding: 0; }
+.hero { position: relative; text-align: center; padding: 40px 0 34px; }
+.hero .ship { position: relative; z-index: 1; width: 132px; height: auto; display: block; margin: 0 auto; }
+/* The contrails leave the nozzles (x ±25 of the mark's 220) and fade out before the name, which they part round. */
+.hero .trails { position: absolute; left: 50%; top: 158px; width: 30px; height: 50px; transform: translateX(-50%); }
+.hero .trails::before, .hero .trails::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 1.6px;
+  background: linear-gradient(rgba(232, 69, 58, .95), transparent);
+}
+.hero .trails::before { left: 0; }
+.hero .trails::after { right: 0; }
+.wordmark { position: relative; z-index: 1; margin: 48px 0 0; }
+.wordmark .name { display: block; font: 700 clamp(2rem, 9vw, 2.8rem)/1 var(--display); color: var(--red); letter-spacing: .02em; }
+.wordmark .rule { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 14px auto 12px; width: min(100%, 22rem); }
+.wordmark .rule::before, .wordmark .rule::after { content: ""; flex: 1; height: 2px; }
+.wordmark .rule::before { background: linear-gradient(to left, var(--red), transparent); }
+.wordmark .rule::after { background: linear-gradient(to right, var(--red), transparent); }
+.wordmark .rule i { width: 12px; height: 12px; background: url("/mark.svg") center / contain no-repeat; }
+.wordmark .studios { display: block; font: 500 14px/1 var(--display); letter-spacing: .6em; margin-right: -.6em; color: var(--studios); }
+.tagline { text-align: center; color: var(--muted); margin: 26px auto 34px; max-width: 30rem; }
+
+.games { display: grid; gap: 16px; }
+.game {
+  background: var(--panel); border: 1px solid var(--edge); border-radius: 16px;
+  padding: 22px 24px 18px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.game h2 { margin: 0 0 .4rem; }
+.game p { color: #cfcae6; }
+.game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
+.home .contact { margin-top: 22px; text-align: center; }
+
+/* The splash's gentle version: the ship glides up into place, the name fades in where it stands. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero .ship { animation: arrive 1.2s .2s cubic-bezier(.22, .61, .36, 1) both; }
+  .hero .trails { animation: fade 1.2s .2s ease-out both; }
+  .wordmark { animation: fade .9s 1s ease-out both; }
+  @keyframes arrive { from { opacity: 0; transform: translateY(50px); } }
+  @keyframes fade { from { opacity: 0; } }
+}
