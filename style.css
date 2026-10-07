@@ -71,7 +71,18 @@ li { margin-bottom: .35rem; }
 li::marker { color: var(--red); }
 strong { color: #fff; }
 .updated { color: var(--muted); font-size: .95rem; margin-bottom: 1.6rem; }
+.langs { color: var(--muted); font-size: .9rem; line-height: 1.9; margin: -.4rem 0 .6rem; }
+.langs a { color: var(--muted); }
+.langs strong { color: var(--ink); font-weight: 600; }
+.note { color: var(--muted); font-size: .9rem; font-style: italic; margin: -1rem 0 1.6rem; }
+/* Japanese, Korean and Chinese: no slanted type, and a title kept whole (in smaller type, as it can't break at a space). */
+:lang(ja) .note, :lang(ko) .note, :lang(zh) .note { font-style: normal; }
+:lang(ja) h1, :lang(ko) h1, :lang(zh) h1 { font-size: clamp(1.6rem, 7vw, 2.1rem); word-break: keep-all; }
+/* German's long compounds (Datenschutzerklärung) hyphenate rather than run off a phone's screen. */
+:lang(de) h1, :lang(de) h2 { hyphens: auto; -webkit-hyphens: auto; }
 a { color: var(--coral); text-underline-offset: 3px; }
+/* A long address in running text (policies.google.com/...) wraps rather than widening a phone's page. */
+main p a { overflow-wrap: anywhere; }
 a:hover { color: #ffb0a4; }
 a:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; border-radius: 3px; }
 table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: .4rem 0 1rem; }
