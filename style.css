@@ -124,6 +124,12 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
   padding: 22px 24px 18px;
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
 }
+.game[hidden] { display: none; }
+.game .soon {
+  display: inline-block; margin: 0 0 .7rem; padding: 5px 10px 4px; border-radius: 999px;
+  font: 500 11px/1 var(--display); letter-spacing: .2em; text-transform: uppercase;
+  color: var(--sky); background: var(--coral);
+}
 .game h2 { margin: 0 0 .4rem; }
 .game p { color: #cfcae6; }
 .game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
