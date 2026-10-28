@@ -11,6 +11,7 @@
   --muted: #a49fc2;
   --red: #e8453a;
   --coral: #ff8a7a;
+  --mint: #6fdcb0;
   --studios: #f07a6c;
   --display: "Unbounded", "Avenir Next", -apple-system, system-ui, sans-serif;
   --sans: -apple-system, "Segoe UI", system-ui, sans-serif;
@@ -130,6 +131,7 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
   font: 500 11px/1 var(--display); letter-spacing: .2em; text-transform: uppercase;
   color: var(--sky); background: var(--coral);
 }
+.game .live { background: var(--mint); }
 .game h2 { margin: 0 0 .4rem; }
 .game p { color: #cfcae6; }
 .game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
