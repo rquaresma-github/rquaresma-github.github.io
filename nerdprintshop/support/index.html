@@ -8,10 +8,10 @@
 <meta name="theme-color" content="#0b0a1a">
 <link rel="icon" href="/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
-<link rel="alternate" hreflang="en" href="https://rquaresma-github.github.io/nerdprintshop/support/">
-<link rel="alternate" hreflang="pt-BR" href="https://rquaresma-github.github.io/nerdprintshop/support/pt-BR/">
-<link rel="alternate" hreflang="es-419" href="https://rquaresma-github.github.io/nerdprintshop/support/es-419/">
-<link rel="alternate" hreflang="x-default" href="https://rquaresma-github.github.io/nerdprintshop/support/">
+<link rel="alternate" hreflang="en" href="https://mapledriftstudios.com/nerdprintshop/support/">
+<link rel="alternate" hreflang="pt-BR" href="https://mapledriftstudios.com/nerdprintshop/support/pt-BR/">
+<link rel="alternate" hreflang="es-419" href="https://mapledriftstudios.com/nerdprintshop/support/es-419/">
+<link rel="alternate" hreflang="x-default" href="https://mapledriftstudios.com/nerdprintshop/support/">
 </head>
 <body>
 <nav><a href="/">Maple Drift</a><a href="/nerdprintshop/privacy/">Privacy policy</a></nav>
@@ -19,13 +19,22 @@
   <p class="eyebrow">Nerd Print Shop</p>
   <h1>Support</h1>
   <p class="langs"><strong>English</strong> · <a href="/nerdprintshop/support/pt-BR/" lang="pt-BR">Português</a> · <a href="/nerdprintshop/support/es-419/" lang="es-419">Español</a></p>
-  <p>Need help with Nerd Print Shop, found a bug, or have an idea? Write to <a href="mailto:mapledrift.support@gmail.com">mapledrift.support@gmail.com</a>. We read every message. For a bug, tell us your device model and what you were doing when it happened.</p>
+  <p>Need help with Nerd Print Shop, found a bug, or have an idea? Write to <a href="mailto:support@mapledriftstudios.com">support@mapledriftstudios.com</a>. We read every message. For a bug, tell us your device model and what you were doing when it happened.</p>
 
   <h2>I bought Shop Owner and it isn't active</h2>
   <p>On the title screen, open <strong>Become the Shop Owner</strong> and tap <strong>Restore purchase</strong>. Use the same App Store or Google Play account you bought it with.</p>
 
   <h2>Will my shop move to a new phone?</h2>
-  <p>On iPhone and iPad, your shop is kept in iCloud when you're signed in, so it carries on on your new device. On Android, it comes back with Google's device backup if backup is turned on.</p>
+  <div class="tabs">
+    <div class="tab-panel" data-platform="ios">
+      <p class="tab-label"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="1.2" width="8" height="13.6" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 12.4h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>iPhone and iPad</p>
+      <p>On iPhone and iPad, your shop is kept in iCloud when you're signed in, so it carries on on your new device.</p>
+    </div>
+    <div class="tab-panel" data-platform="android">
+      <p class="tab-label"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M2.5 13a5.5 5.5 0 0 1 11 0z M5 10.4a.8.8 0 1 0 1.6 0a.8.8 0 1 0-1.6 0z M9.4 10.4a.8.8 0 1 0 1.6 0a.8.8 0 1 0-1.6 0z"/><path d="M4.6 8.4 3.4 6.3M11.4 8.4l1.2-2.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Android</p>
+      <p>On Android, it comes back with Google's device backup if backup is turned on.</p>
+    </div>
+  </div>
 
   <h2>How do I start over?</h2>
   <p>On the title screen, tap <strong>Open a new shop</strong>. This replaces your current shop, so the game asks you to confirm first.</p>
@@ -36,6 +45,42 @@
   <h2>Privacy</h2>
   <p>See our <a href="/nerdprintshop/privacy/">privacy policy</a>.</p>
 </main>
-<footer>© 2026 Maple Drift Studios</footer>
+<footer>© 2026 Maple Drift Studios<br><small>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</small></footer>
+<script>
+(() => {
+  const boxes = document.querySelectorAll(".tabs");
+  if (!boxes.length) return;
+  const show = (platform, remember) => {
+    document.querySelectorAll(".tabs [data-platform]").forEach(el => {
+      const on = el.dataset.platform === platform;
+      if (el.matches("button")) el.setAttribute("aria-selected", on); else el.hidden = !on;
+    });
+    if (remember) try { localStorage.setItem("platform", platform); } catch (e) {}
+  };
+  boxes.forEach(box => {
+    const list = document.createElement("div");
+    list.className = "tablist";
+    list.setAttribute("role", "tablist");
+    box.querySelectorAll(".tab-panel").forEach(panel => {
+      const tab = document.createElement("button");
+      tab.type = "button";
+      tab.setAttribute("role", "tab");
+      tab.dataset.platform = panel.dataset.platform;
+      tab.innerHTML = panel.querySelector(".tab-label").innerHTML;
+      tab.addEventListener("click", () => show(tab.dataset.platform, true));
+      list.append(tab);
+      panel.setAttribute("role", "tabpanel");
+    });
+    box.prepend(list);
+    box.classList.add("ready");
+  });
+  const known = [...boxes[0].querySelectorAll(".tab-panel")].map(panel => panel.dataset.platform);
+  const asked = new URLSearchParams(location.search).get("platform");
+  let saved = null;
+  try { saved = localStorage.getItem("platform"); } catch (e) {}
+  if (known.includes(asked)) show(asked, true);
+  else show(known.includes(saved) ? saved : /Android/i.test(navigator.userAgent) && known.includes("android") ? "android" : known[0], false);
+})();
+</script>
 </body>
 </html>

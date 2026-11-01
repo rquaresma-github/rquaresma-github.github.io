@@ -162,6 +162,10 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
 .game p { color: #cfcae6; }
 .game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
 .home .contact { margin-top: 22px; text-align: center; }
+/* The stores' own badges (Apple's and Google's, as they supply them: not resized below 40px, clear space around). */
+.game .badges { display: flex; flex-wrap: wrap; gap: 12px; margin: 1rem 0 .3rem; }
+.game .badges a, .game .badges img { display: block; }
+.game .badges img { height: 40px; width: auto; }
 footer small { display: block; max-width: 34rem; margin: 6px auto 0; font-size: 11px; line-height: 1.5; opacity: .7; }
 
 /* The splash's gentle version: the ship glides up into place, the name fades in where it stands. */
