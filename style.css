@@ -162,6 +162,10 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
 .game p { color: #cfcae6; }
 .game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
 .home .contact { margin-top: 22px; text-align: center; }
+/* A game's stores: a pill for each platform, its icon and whether it's out (linking the store) or coming. */
+.game .stores { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 .7rem; }
+.game .stores .soon { margin: 0; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+.game .stores svg { width: 13px; height: 13px; flex: none; }
 footer small { display: block; max-width: 34rem; margin: 6px auto 0; font-size: 11px; line-height: 1.5; opacity: .7; }
 
 /* The splash's gentle version: the ship glides up into place, the name fades in where it stands. */

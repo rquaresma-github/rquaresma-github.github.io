@@ -8,10 +8,10 @@
 <meta name="theme-color" content="#0b0a1a">
 <link rel="icon" href="/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
-<link rel="alternate" hreflang="en" href="https://rquaresma-github.github.io/nerdprintshop/support/">
-<link rel="alternate" hreflang="pt-BR" href="https://rquaresma-github.github.io/nerdprintshop/support/pt-BR/">
-<link rel="alternate" hreflang="es-419" href="https://rquaresma-github.github.io/nerdprintshop/support/es-419/">
-<link rel="alternate" hreflang="x-default" href="https://rquaresma-github.github.io/nerdprintshop/support/">
+<link rel="alternate" hreflang="en" href="https://mapledriftstudios.com/nerdprintshop/support/">
+<link rel="alternate" hreflang="pt-BR" href="https://mapledriftstudios.com/nerdprintshop/support/pt-BR/">
+<link rel="alternate" hreflang="es-419" href="https://mapledriftstudios.com/nerdprintshop/support/es-419/">
+<link rel="alternate" hreflang="x-default" href="https://mapledriftstudios.com/nerdprintshop/support/">
 </head>
 <body>
 <nav lang="en"><a href="/">Maple Drift</a><a href="/nerdprintshop/privacy/es-419/" lang="es-419">Política de privacidad</a></nav>
@@ -19,13 +19,22 @@
   <p class="eyebrow">Nerd Print Shop</p>
   <h1>Soporte</h1>
   <p class="langs"><a href="/nerdprintshop/support/" lang="en">English</a> · <a href="/nerdprintshop/support/pt-BR/" lang="pt-BR">Português</a> · <strong>Español</strong></p>
-  <p>¿Necesitas ayuda con Nerd Print Shop, encontraste un error o tienes una idea? Escribe a <a href="mailto:mapledrift.support@gmail.com">mapledrift.support@gmail.com</a>. Leemos todos los mensajes. Para un error, cuéntanos el modelo de tu dispositivo y qué estabas haciendo cuando ocurrió.</p>
+  <p>¿Necesitas ayuda con Nerd Print Shop, encontraste un error o tienes una idea? Escribe a <a href="mailto:support@mapledriftstudios.com">support@mapledriftstudios.com</a>. Leemos todos los mensajes. Para un error, cuéntanos el modelo de tu dispositivo y qué estabas haciendo cuando ocurrió.</p>
 
   <h2>Compré Dueño de la Tienda y no está activo</h2>
   <p>En la pantalla de inicio, abre <strong>Hazte Dueño de la Tienda</strong> y toca <strong>Restaurar compra</strong>. Usa la misma cuenta de App Store o Google Play con la que compraste.</p>
 
   <h2>¿Mi tienda pasa a un teléfono nuevo?</h2>
-  <p>En iPhone y iPad, tu tienda se guarda en iCloud cuando tienes sesión iniciada, así que sigue en el dispositivo nuevo. En Android, vuelve con la copia de seguridad de Google si está activada.</p>
+  <div class="tabs">
+    <div class="tab-panel" data-platform="ios">
+      <p class="tab-label"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="1.2" width="8" height="13.6" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 12.4h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>iPhone y iPad</p>
+      <p>En iPhone y iPad, tu tienda se guarda en iCloud cuando tienes sesión iniciada, así que sigue en el dispositivo nuevo.</p>
+    </div>
+    <div class="tab-panel" data-platform="android">
+      <p class="tab-label"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M2.5 13a5.5 5.5 0 0 1 11 0z M5 10.4a.8.8 0 1 0 1.6 0a.8.8 0 1 0-1.6 0z M9.4 10.4a.8.8 0 1 0 1.6 0a.8.8 0 1 0-1.6 0z"/><path d="M4.6 8.4 3.4 6.3M11.4 8.4l1.2-2.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Android</p>
+      <p>En Android, vuelve con la copia de seguridad de Google si está activada.</p>
+    </div>
+  </div>
 
   <h2>¿Cómo empiezo de nuevo?</h2>
   <p>En la pantalla de inicio, toca <strong>Abrir una tienda nueva</strong>. Esto reemplaza tu tienda actual, así que el juego te pide confirmar antes.</p>
@@ -36,6 +45,42 @@
   <h2>Privacidad</h2>
   <p>Consulta nuestra <a href="/nerdprintshop/privacy/es-419/">política de privacidad</a>.</p>
 </main>
-<footer lang="en">© 2026 Maple Drift Studios</footer>
+<footer lang="en">© 2026 Maple Drift Studios<br><small>The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</small></footer>
+<script>
+(() => {
+  const boxes = document.querySelectorAll(".tabs");
+  if (!boxes.length) return;
+  const show = (platform, remember) => {
+    document.querySelectorAll(".tabs [data-platform]").forEach(el => {
+      const on = el.dataset.platform === platform;
+      if (el.matches("button")) el.setAttribute("aria-selected", on); else el.hidden = !on;
+    });
+    if (remember) try { localStorage.setItem("platform", platform); } catch (e) {}
+  };
+  boxes.forEach(box => {
+    const list = document.createElement("div");
+    list.className = "tablist";
+    list.setAttribute("role", "tablist");
+    box.querySelectorAll(".tab-panel").forEach(panel => {
+      const tab = document.createElement("button");
+      tab.type = "button";
+      tab.setAttribute("role", "tab");
+      tab.dataset.platform = panel.dataset.platform;
+      tab.innerHTML = panel.querySelector(".tab-label").innerHTML;
+      tab.addEventListener("click", () => show(tab.dataset.platform, true));
+      list.append(tab);
+      panel.setAttribute("role", "tabpanel");
+    });
+    box.prepend(list);
+    box.classList.add("ready");
+  });
+  const known = [...boxes[0].querySelectorAll(".tab-panel")].map(panel => panel.dataset.platform);
+  const asked = new URLSearchParams(location.search).get("platform");
+  let saved = null;
+  try { saved = localStorage.getItem("platform"); } catch (e) {}
+  if (known.includes(asked)) show(asked, true);
+  else show(known.includes(saved) ? saved : /Android/i.test(navigator.userAgent) && known.includes("android") ? "android" : known[0], false);
+})();
+</script>
 </body>
 </html>
