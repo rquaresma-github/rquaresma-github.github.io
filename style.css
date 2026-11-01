@@ -41,11 +41,14 @@ nav {
 }
 nav a { color: var(--muted); text-decoration: none; }
 nav a:hover { color: var(--ink); }
-nav a:first-child {
+/* The switch between a game's App Store page and its Google Play one. */
+nav .platforms { color: var(--muted); font-weight: 500; }
+nav .platforms strong { color: var(--ink); font-weight: 600; }
+nav > a:first-child {
   display: inline-flex; align-items: center; gap: 10px; margin-right: auto;
   font: 700 15px/1 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--red);
 }
-nav a:first-child::before {
+nav > a:first-child::before {
   content: ""; width: 26px; height: 25px;
   background: url("/mark.svg") center / contain no-repeat;
 }
@@ -136,6 +139,18 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
 .game p { color: #cfcae6; }
 .game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
 .home .contact { margin-top: 22px; text-align: center; }
+/* A game's stores (in one, or coming to one) and its pages for each platform. */
+.game .stores { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 .7rem; }
+.game .stores .soon { margin: 0; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; }
+.game .stores svg, .game .platforms svg { width: 14px; height: 14px; flex: none; }
+.game ul.platforms { display: grid; gap: 6px; }
+.game ul.platforms li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; margin: 0; }
+.game .platform { display: inline-flex; align-items: center; gap: 7px; min-width: 8.5rem; color: var(--muted); font-weight: 500; }
+@media (max-width: 480px) {
+  .game .stores .soon { letter-spacing: .1em; }
+  .game .platform { flex-basis: 100%; }
+}
+footer small { display: block; max-width: 34rem; margin: 6px auto 0; font-size: 11px; line-height: 1.5; opacity: .7; }
 
 /* The splash's gentle version: the ship glides up into place, the name fades in where it stands. */
 @media (prefers-reduced-motion: no-preference) {
