@@ -169,7 +169,7 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
   image-rendering: pixelated; box-shadow: 0 10px 30px rgb(0 0 0 / .4);
 }
 @media (max-width: 600px) {
-  .game.has-video { grid-template-columns: 1fr; gap: 18px; }
+  .game.has-video:not([hidden]) { grid-template-columns: 1fr; gap: 18px; }
   .game .clip { grid-column: 1; width: min(86%, 300px); justify-self: center; }
 }
 .home .contact { margin-top: 22px; text-align: center; }
