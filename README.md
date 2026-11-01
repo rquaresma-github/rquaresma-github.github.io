@@ -1,10 +1,11 @@
 # Mapledrift
 
-Support and privacy pages for Mapledrift apps, published with GitHub Pages at https://rquaresma-github.github.io
+Support and privacy pages for Mapledrift apps, published with GitHub Pages at https://mapledriftstudios.com (the old https://rquaresma-github.github.io addresses redirect there)
 
-- Loose Threads: [support](https://rquaresma-github.github.io/loosethreads/support/) · [privacy policy](https://rquaresma-github.github.io/loosethreads/privacy/)
-- Pencil Pairs: [support](https://rquaresma-github.github.io/pencilpairs/support/) · [privacy policy](https://rquaresma-github.github.io/pencilpairs/privacy/)
-- Gravensmoor: [support](https://rquaresma-github.github.io/gravensmoor/support/) · [privacy policy](https://rquaresma-github.github.io/gravensmoor/privacy/)
-- Night Rate: [support](https://rquaresma-github.github.io/night-rate/support/) · [privacy policy](https://rquaresma-github.github.io/night-rate/privacy/)
-- Ricochet Bricks: [support](https://rquaresma-github.github.io/ricochet/support/) · [privacy policy](https://rquaresma-github.github.io/ricochet/privacy/) (the old addresses under /ricochet-bricks/ redirect here)
-- Thin Walls: [support](https://rquaresma-github.github.io/thinwalls/support/) · [privacy policy](https://rquaresma-github.github.io/thinwalls/privacy/)
+- Loose Threads: [support](https://mapledriftstudios.com/loosethreads/support/) · [privacy policy](https://mapledriftstudios.com/loosethreads/privacy/)
+- Pencil Pairs: [support](https://mapledriftstudios.com/pencilpairs/support/) · [privacy policy](https://mapledriftstudios.com/pencilpairs/privacy/)
+- Gravensmoor, iPhone and iPad: [support](https://mapledriftstudios.com/gravensmoor/support/) · [privacy policy](https://mapledriftstudios.com/gravensmoor/privacy/)
+- Gravensmoor, Android: [support](https://mapledriftstudios.com/gravensmoor/android/support/) · [privacy policy](https://mapledriftstudios.com/gravensmoor/android/privacy/) (the first address, /gravensmoor/privacy/android/, redirects here)
+- Night Rate: [support](https://mapledriftstudios.com/night-rate/support/) · [privacy policy](https://mapledriftstudios.com/night-rate/privacy/)
+- Ricochet Bricks: [support](https://mapledriftstudios.com/ricochet/support/) · [privacy policy](https://mapledriftstudios.com/ricochet/privacy/) (the old addresses under /ricochet-bricks/ redirect here)
+- Thin Walls: [support](https://mapledriftstudios.com/thinwalls/support/) · [privacy policy](https://mapledriftstudios.com/thinwalls/privacy/)
