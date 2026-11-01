@@ -18,15 +18,18 @@
   </header>
   <p class="tagline">Small games, told well.</p>
   <div class="games">
-    <section class="game">
-      <p class="soon live">Available now</p>
-      <h2>Gravensmoor</h2>
-      <p>Cross a haunted valley to win back the stolen Great Lantern. A pixel-art vertical shooter with an open valley of roads and villages, fifteen guardians and a story told in song.</p>
-      <ul>
-        <li><a href="/gravensmoor/support/">Support</a></li>
-        <li><a href="/gravensmoor/privacy/">Privacy policy</a></li>
-      </ul>
-      <p class="badges"><a href="https://apps.apple.com/app/id6818686335"><img src="/badges/download-on-the-app-store.svg" width="120" height="40" alt="Download on the App Store"></a></p>
+    <section class="game has-video">
+      <video class="clip" src="/media/gravensmoor-gameplay.mp4" poster="/media/gravensmoor-gameplay.jpg" width="480" height="640" autoplay muted loop playsinline aria-label="Gravensmoor gameplay: the title, Wren on the road to Rustfield, fighting a guardian, arriving in Rustfield and buying at its shop"></video>
+      <div>
+        <p class="soon live">Available now</p>
+        <h2>Gravensmoor</h2>
+        <p>Cross a haunted valley to win back the stolen Great Lantern. A pixel-art vertical shooter with an open valley of roads and villages, fifteen guardians and a story told in song.</p>
+        <ul>
+          <li><a href="/gravensmoor/support/">Support</a></li>
+          <li><a href="/gravensmoor/privacy/">Privacy policy</a></li>
+        </ul>
+        <p class="badges"><a href="https://apps.apple.com/app/id6818686335"><img src="/badges/download-on-the-app-store.svg" width="120" height="40" alt="Download on the App Store"></a></p>
+      </div>
     </section>
     <section class="game">
       <p class="soon">Coming soon</p>
@@ -87,5 +90,11 @@
   <div class="contact">Questions? Email <a href="mailto:support@mapledriftstudios.com">support@mapledriftstudios.com</a></div>
 </main>
 <footer>© 2026 Maple Drift Studios</footer>
+<script>
+// Reduced motion: the clip stays on its still frame and gets controls to play it by choice.
+if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  for (const v of document.querySelectorAll("video.clip")) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; }
+}
+</script>
 </body>
 </html>

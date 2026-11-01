@@ -161,6 +161,17 @@ footer { max-width: 44rem; margin: 22px auto 0; color: var(--muted); font: 13px/
 .game h2 { margin: 0 0 .4rem; }
 .game p { color: #cfcae6; }
 .game ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 22px; flex-wrap: wrap; font: 600 15px/1.4 var(--sans); }
+/* A card with a gameplay clip: the clip (a 3:4 recording, as on an iPad) to the right of the text, or above it on a phone. */
+.game.has-video:not([hidden]) { display: grid; grid-template-columns: 1fr 240px; gap: 24px; align-items: center; }
+.game .clip {
+  grid-column: 2; grid-row: 1; display: block; width: 100%; height: auto; aspect-ratio: 3 / 4;
+  border-radius: 12px; border: 1px solid var(--edge); background: #000;
+  image-rendering: pixelated; box-shadow: 0 10px 30px rgb(0 0 0 / .4);
+}
+@media (max-width: 600px) {
+  .game.has-video { grid-template-columns: 1fr; gap: 18px; }
+  .game .clip { grid-column: 1; width: min(86%, 300px); justify-self: center; }
+}
 .home .contact { margin-top: 22px; text-align: center; }
 /* The stores' own badges (Apple's and Google's, as they supply them: not resized below 40px, clear space around). */
 .game .badges { display: flex; flex-wrap: wrap; gap: 12px; margin: 1rem 0 .3rem; }
