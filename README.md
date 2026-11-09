@@ -9,3 +9,4 @@ Support and privacy pages for Mapledrift apps, published with GitHub Pages at ht
 - Night Rate: [support](https://mapledriftstudios.com/night-rate/support/) · [privacy policy](https://mapledriftstudios.com/night-rate/privacy/)
 - Ricochet Bricks: [support](https://mapledriftstudios.com/ricochet/support/) · [privacy policy](https://mapledriftstudios.com/ricochet/privacy/) (the old addresses under /ricochet-bricks/ redirect here)
 - Thin Walls: [support](https://mapledriftstudios.com/thinwalls/support/) · [privacy policy](https://mapledriftstudios.com/thinwalls/privacy/)
+- YouTube Publisher (internal tool, for its Google sign-in): [home](https://mapledriftstudios.com/youtube-publisher/) · [privacy policy](https://mapledriftstudios.com/youtube-publisher/privacy/) · [terms](https://mapledriftstudios.com/youtube-publisher/terms/)
