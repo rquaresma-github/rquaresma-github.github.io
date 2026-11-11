@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gravensmoor</title>
+<meta name="description" content="Cross a haunted valley to win back the stolen Great Lantern. A pixel-art vertical shooter with an open valley of roads and villages, fifteen guardians and a story told in song.">
+<meta name="theme-color" content="#0b0a1a">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mapledriftstudios.com/gravensmoor/">
+<meta property="og:title" content="Gravensmoor">
+<meta property="og:description" content="Cross a haunted valley to win back the stolen Great Lantern. A pixel-art vertical shooter with an open valley of roads and villages, fifteen guardians and a story told in song.">
+<meta property="og:image" content="https://mapledriftstudios.com/media/gravensmoor-gameplay.jpg">
+<link rel="canonical" href="https://mapledriftstudios.com/gravensmoor/">
+<link rel="icon" href="/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="home">
+<nav><a href="/">Maple Drift</a><a href="/gravensmoor/support/">Support</a><a href="/gravensmoor/privacy/">Privacy policy</a></nav>
+<main>
+  <section class="game has-video">
+    <video class="clip" src="/media/gravensmoor-gameplay.mp4" poster="/media/gravensmoor-gameplay.jpg" width="480" height="640" autoplay muted loop playsinline aria-label="Gravensmoor gameplay: a farmer’s rumour of the Gale Harpy, the road to it, the fight, a lantern shard won back and the song about it, arriving in Rustfield, its shopkeeper, and the title"></video>
+    <div>
+      <p class="soon live">Available now</p>
+      <h2>Gravensmoor</h2>
+      <p>Cross a haunted valley to win back the stolen Great Lantern. A pixel-art vertical shooter with an open valley of roads and villages, fifteen guardians and a story told in song.</p>
+      <p class="badges"><a href="https://apps.apple.com/app/id6818686335"><img src="/badges/download-on-the-app-store.svg" width="120" height="40" alt="Download on the App Store"></a></p>
+      <p class="where">Now on the App Store in Canada, Australia and New Zealand</p>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Maple Drift Studios</footer>
+<script>
+// Reduced motion: the clip stays on its still frame and gets controls to play it by choice.
+if (matchMedia("(prefers-reduced-motion: reduce)").matches)
+  for (const v of document.querySelectorAll("video.clip")) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; }
+</script>
+</body>
+</html>
