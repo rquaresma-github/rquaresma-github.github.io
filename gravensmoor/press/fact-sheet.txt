@@ -31,10 +31,9 @@ Twelve: English, Portuguese (Brazil), Spanish, German, French, Italian, Japanese
 Korean, Chinese (Simplified and Traditional), Turkish and Ukrainian.
 
 RELEASE
-Out since Oct 30 2026 in Canada, Australia and New Zealand.
-From Nov 16 2026 also in the US, the UK, Japan, South Korea, Taiwan, Hong Kong, Macao,
-Turkey, Ukraine, Brazil, the Spanish-speaking countries of Latin America and
-Switzerland. The EU and mainland China are not part of this launch.
+Out since Oct 30 2026 in Canada, Australia and New Zealand; since Nov 16 2026 in
+145 countries and regions, among them the US, the UK, Japan, South Korea, Brazil and
+India. Not in the EU, Russia, mainland China or Vietnam.
 
 IN THIS KIT
 gravensmoor-icon-1024.png   The app icon, 1024 x 1024
