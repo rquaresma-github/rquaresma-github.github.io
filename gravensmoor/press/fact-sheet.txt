@@ -35,6 +35,45 @@ Out since Oct 30 2026 in Canada, Australia and New Zealand; since Nov 16 2026 in
 145 countries and regions, among them the US, the UK, Japan, South Korea, Brazil and
 India. Not in the EU, Russia, mainland China or Vietnam.
 
+WHERE IT'S SOLD
+On the App Store in 145 countries and regions.
+
+North America (3): Canada, Mexico and the United States.
+
+Central America and the Caribbean (24): Anguilla, Antigua and Barbuda, the Bahamas,
+Barbados, Belize, Bermuda, the British Virgin Islands, the Cayman Islands, Costa Rica,
+Dominica, the Dominican Republic, El Salvador, Grenada, Guatemala, Honduras, Jamaica,
+Montserrat, Nicaragua, Panama, St. Kitts and Nevis, St. Lucia, St. Vincent and the
+Grenadines, Trinidad and Tobago and the Turks and Caicos Islands.
+
+South America (12): Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Guyana,
+Paraguay, Peru, Suriname, Uruguay and Venezuela.
+
+Europe (14): Albania, Belarus, Bosnia and Herzegovina, Iceland, Kosovo, Moldova,
+Montenegro, North Macedonia, Norway, Serbia, Switzerland, Turkey, Ukraine and the
+United Kingdom.
+
+Middle East (11): Bahrain, Iraq, Israel, Jordan, Kuwait, Lebanon, Oman, Qatar, Saudi
+Arabia, the United Arab Emirates and Yemen.
+
+Africa (41): Algeria, Angola, Benin, Botswana, Burkina Faso, Cameroon, Cape Verde,
+Chad, Côte d’Ivoire, the Democratic Republic of the Congo, Egypt, Eswatini, Gabon, the
+Gambia, Ghana, Guinea-Bissau, Kenya, Liberia, Libya, Madagascar, Malawi, Mali,
+Mauritania, Mauritius, Morocco, Mozambique, Namibia, Niger, Nigeria, the Republic of
+the Congo, Rwanda, Senegal, Seychelles, Sierra Leone, South Africa, São Tomé and
+Príncipe, Tanzania, Tunisia, Uganda, Zambia and Zimbabwe.
+
+Central and South Asia and the Caucasus (15): Afghanistan, Armenia, Azerbaijan,
+Bhutan, Georgia, India, Kazakhstan, Kyrgyzstan, the Maldives, Nepal, Pakistan, Sri
+Lanka, Tajikistan, Turkmenistan and Uzbekistan.
+
+East and Southeast Asia (15): Brunei, Cambodia, Hong Kong, Indonesia, Japan, Laos,
+Macao, Malaysia, Mongolia, Myanmar, the Philippines, Singapore, South Korea, Taiwan
+and Thailand.
+
+Oceania (10): Australia, Fiji, Micronesia, Nauru, New Zealand, Palau, Papua New
+Guinea, the Solomon Islands, Tonga and Vanuatu.
+
 IN THIS KIT
 gravensmoor-icon-1024.png   The app icon, 1024 x 1024
 screenshots/                Eight iPhone screenshots, 1320 x 2868
